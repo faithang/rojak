@@ -1,7 +1,7 @@
 
-  # PortmanteauSG
+  # Rojak
 
-  This is a code bundle for PortmanteauSG. The original project is available at https://www.figma.com/design/rt5VMiciJjFJRrPTtxmaXS/PortmanteauSG.
+  This is a code bundle for Rojak. The original project is available at https://www.figma.com/design/rt5VMiciJjFJRrPTtxmaXS/PortmanteauSG.
 
   ## Running the code
 
