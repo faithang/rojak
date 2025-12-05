@@ -427,7 +427,6 @@ export function TutorialScreen({
                     onClick={handleGoBackToGuess}
                     variant="secondary"
                     fullWidth
-                    borderColor="#8B5CF6"
                   >
                     No, let me guess first
                   </Button>

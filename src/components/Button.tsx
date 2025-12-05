@@ -42,7 +42,8 @@ export function Button({
 
   const getBorderStyle = () => {
     if (borderColor) return `2px solid ${borderColor}`;
-    if (variant === 'secondary' || variant === 'secondary-light') return '2px solid rgba(255, 255, 255, 0.4)';
+    if (variant === 'secondary') return '2px solid #8B5CF6';
+    if (variant === 'secondary-light') return '2px solid rgba(255, 255, 255, 0.4)';
     if (variant === 'outline') return '2px solid rgba(0,0,0,0.2)';
     return 'none';
   };
