@@ -23,8 +23,8 @@ const tutorialCards = [
   },
   {
     front:
-      "SG founding father + First line of a Backstreet Boys song",
-    back: "Lee Kuan Yew are my fire",
+      "What PAP is accused of every election + A fungal infection,",
+    back: "Gerrymande-ringworm",
   },
 ];
 
