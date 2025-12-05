@@ -208,13 +208,13 @@ export function TutorialScreen({
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <h2 className="text-lg md:text-xl mb-0.5">
+          <h2 className="text-xl md:text-xl mb-0.5">
             {currentStep === 0 &&
               "Step 1: Understanding the mechanic"}
             {currentStep === 1 && "Step 2: Guided practice"}
             {currentStep === 2 && "Step 3: Full practice round"}
           </h2>
-          <p className="text-white/80 text-xs md:text-sm">
+          <p className="text-white/80 text-sm md:text-md">
             {getMicrocopy()}
           </p>
         </motion.div>
@@ -270,7 +270,7 @@ export function TutorialScreen({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <p className="text-white/80 text-xs">
+              <p className="text-white/80 text-sm md:text-md">
                 Got it? Let&apos;s practice again!
               </p>
               <Button
@@ -291,7 +291,7 @@ export function TutorialScreen({
               animate={{ opacity: 1, y: 0 }}
               className="text-center space-y-1"
             >
-              <p className="text-white/70 text-xs">
+              <p className="text-white/70 text-sm md:text-md">
                 Tap the card to see the answer.
               </p>
               <button
@@ -309,7 +309,7 @@ export function TutorialScreen({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <p className="text-white/70 text-center text-xs">
+              <p className="text-white/70 text-center text-sm md:text-md">
                 Compare with your guess. How did you do?
               </p>
               <div className="flex gap-2 md:gap-3">
@@ -338,9 +338,9 @@ export function TutorialScreen({
               animate={{ opacity: 1, y: 0 }}
               className="space-y-1"
             >
-              <p className="text-white/70 text-center text-xs">
-                In the real game, you can skip here. (Disabled
-                for tutorial practice.)
+              <p className="text-white/70 text-center text-sm md:text-md">
+                In the real game, you can skip here.<br/> 
+                (Disabled for tutorial practice.)
               </p>
               <div className="flex gap-2 md:gap-3">
                 <GameButton
@@ -364,7 +364,7 @@ export function TutorialScreen({
               animate={{ opacity: 1, y: 0 }}
               className="space-y-1"
             >
-              <p className="text-white/70 text-center text-xs">
+              <p className="text-white/70 text-center text-sm md:text-md">
                 Compare with your guess. How did you do?
               </p>
               <div className="flex gap-2 md:gap-3">

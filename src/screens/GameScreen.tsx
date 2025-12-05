@@ -325,14 +325,14 @@ export function GameScreen({
                 {skipsRemaining}/3
               </span>
             </motion.div>
-            <div className="text-white/60 text-[10px] px-1">
+            <div className="text-white/60 text-xs px-1">
               skips left
             </div>
           </motion.div>
         </div>
 
         {/* Remaining cards count */}
-        <div className="text-center text-white/70 text-xs mb-0.5">
+        <div className="text-center text-white/70 text-sm md:text-md mb-0.5">
           Round {gameState.currentRound} — {cardsLeftInRound}{" "}
           left
         </div>
@@ -392,9 +392,8 @@ export function GameScreen({
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.2 }}
               >
-                <p className="text-white/70 text-center text-xs mb-1">
-                  Make a guess in your head, or skip if you're
-                  totally stuck.
+                <p className="text-white/70 text-center text-sm md:text-md mb-2">
+                  Make a guess in your head,<br/> or skip if you're totally stuck.
                 </p>
                 <div className="flex gap-2 md:gap-3">
                   <GameButton
@@ -412,7 +411,7 @@ export function GameScreen({
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.2 }}
               >
-                <p className="text-white/70 text-center text-xs mb-1">
+                <p className="text-white/70 text-center text-sm md:text-md mb-2">
                   Compare with your guess. How did you do?
                 </p>
                 <div className="flex gap-2 md:gap-3">
