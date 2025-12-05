@@ -1,0 +1,5 @@
+{
+  "framework": "container",
+  "handle": "gvt-faith/rojak",
+  "port": 3000
+}

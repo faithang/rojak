@@ -1,0 +1,49 @@
+export const cardsData = `Halloween greeting + Agreement that ended World War II,Trick or Treaty of Versailles
+Levitating singer + big risk,Dua Leap of faith
+SG founding father + first line of a Backstreet Boys' song,Lee Kuan Yew are my fire
+Hokkien vulgar phrase + Ben Kheng's wife,KaniNarelle Kheng
+Best Italian restaurant in SG + Famous female black singer,Saizerihanna
+SG's biggest F1 fan + TikTok famous middle aged dancer,Iswaruncle Raymond
+Kids' movies about robot-cars (singular) + Our national mascot,Transformerlion
+Basic SG guys' clothing brand + Chinese herbal drink,Uniqluo han guo
+Chinese theme park + Hokkien word for male reproductive organ,Haw Par Villanjiao
+Opposition's biggest man + Country that some Americans think is in China,Pritam Singhapore
+First line of YPs' favourite song + Supplier of BTOs,Xi wang ni yi housing development board
+OG blogger/influencer who's adopted + Food catering company,Naomi Neo Garden
+What happens in August each year + X-ray doctor,National Day Paradiologist
+Uncle Raymond's intern + What Sang Nila Utama saw,Guo-Lion
+"""Senator I'm Singaporean!"" + What a mum tells a toddler at mealtimes",Shou Zi Chew your food!
+What Jamus is famous for saying + No. 1 cause of death in SG,Warms the cockles of my heart disease
+Tamil TV channel + TSL singer's IG handle,Vasan-thambellina
+First line of a CNY song + English translation of meimei,Dong dong dong chi-younger sister
+First line of Kit Chan's NDP song + Someone who splashes paint on your door,Whenever I am feeling loan shark
+A TSL influencer who recently got his balls removed + What you might call biting your nails,Rainervous habit
+What PAP does every election to disadvantage the opposition + A fungal infection,Gerrymande-ringworm
+Fairy tale about a boy who never grows up + Full name of an SG expressway,Peter Pan Island Expressway
+First HDB town in SG + A type of singing found in the Swiss Alps,Toa Payodelling
+Phone plan provider + Something that's orbiting Earth,Starhubble Space Telescope / GOMOon
+Person who wrote music for Nolan's films + When you go overseas to learn a language,Hans Zimmersion Programme
+"Singer of ""Old Town Road"" + An agreement between two Universities",Lil Nas Xchange Programme
+Popular fried food brand + When you don't eat carbs,Old Chang Keto Diet
+Famous female singer + SAF Armour tagline,Taylor Swift and Decisive
+RSAF tagline + popular beach sport,Abov(e)olleyball
+2010s male tween sensation + premium non-halal meat,Justin Bieberico Pork
+Disney show about twins + Tiktok Oxford linguist,The Suite Life of Zack & Cody Brody
+Something that puts a smile on every Singaporean child's face + Famous painter who cut his ear off,Milo Van Gogh
+Every kid's favourite restaurant + A US president,McDonald Trump
+Famous Indian advocate for peace + Lead actor of Brooklyn 99,Mahatma Gandy Samberg
+Something you would say when you get a call while driving + Modern NDP song,I'm on The Road Ahead
+Social media app + Pasar malam staple,Instagramly burger
+Spiderman actor + Popular dinner & nightlife area,Tom Holland Village
+Neighbourhood in Central SG + A city in Japan,Ang Mo Kyoto
+Neighbourhood in Eastern SG + A lady who likes to wear something BOOMZ!,Pasir Ris Low
+A dish you can find in Bangkok + A porn star who was jailed,Pad Titus Low
+Phua Chu Kang's catchphrase + What would earn you 0 for a school assignment,Don't Play Plagiarism
+The reason for Zoom's rise in popularity + Katy Perry song,COVID Nineteenage Dream
+Local fried chicken dish + A day the British celebrates with fireworks,Har cheong Guy Fawkes Day
+Dimsum dish + Powerhouse of the cell,Siew Mai-tochondria
+A secondary school + Popular AC/DC song,Catholic Highway to Hell
+Neighbourhood in Western SG + Online tool for capturing live audience feedback,Clementimeter
+What Heng Swee Kiat is known for having + When you forget to use a condom,East Coast Plan B
+Japanese dish with chicken & egg + Cartoon character with webbed feet,OyakoDonald Duck
+What NUS is known for + Cartoon about a cat & mouse,Peeping Tom & Jerry`;
