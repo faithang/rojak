@@ -1,7 +1,7 @@
 
-  # Rojak
+  # Rojak: Singaporean Word Fusion Game
 
-  This is a code bundle for Rojak. The original project is available at https://www.figma.com/design/rt5VMiciJjFJRrPTtxmaXS/PortmanteauSG.
+  This is a code bundle for Rojak: A Singaporean Word Fusion Game.
 
   ## Running the code
 
