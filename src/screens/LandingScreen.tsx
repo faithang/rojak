@@ -14,7 +14,7 @@ export function LandingScreen({
   onHowToPlay,
 }: LandingScreenProps) {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6 relative overflow-hidden">
+    <div className="min-h-[100dvh] flex flex-col items-center justify-center p-6 relative overflow-hidden">
       <Sparkles count={30} />
 
       {/* Gradient background */}
@@ -23,6 +23,7 @@ export function LandingScreen({
         style={{
           background:
             "linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)",
+          minHeight: '100dvh'
         }}
       />
 

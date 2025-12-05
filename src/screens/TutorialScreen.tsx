@@ -18,12 +18,13 @@ const tutorialCards = [
   },
   {
     front:
-      "TV series about a Chemistry teacher who gets into drugs + Sport played with a shuttlecock",
-    back: "Breaking Badminton",
+      "Every kid's favourite fast-food chain + US president",
+    back: "McDonald Trump",
   },
   {
-    front: "Eight-armed marine animal + Fastest man on Earth",
-    back: "OctopUsain Bolt",
+    front:
+      "SG founding father + First line of a Backstreet Boys song",
+    back: "Lee Kuan Yew are my fire",
   },
 ];
 
@@ -117,7 +118,7 @@ export function TutorialScreen({
   };
 
   return (
-    <div className="min-h-screen flex flex-col p-3 md:p-6 relative overflow-hidden">
+    <div className="min-h-[100dvh] flex flex-col p-3 md:p-6 relative overflow-hidden">
       {/* Gradient background */}
       <div
         className="absolute inset-0 -z-10"
@@ -186,7 +187,7 @@ export function TutorialScreen({
 
       <div className="max-w-md mx-auto w-full flex-1 flex flex-col">
         {/* Progress */}
-        <div className="flex gap-2 mb-2">
+        <div className="flex gap-2 mb-1">
           {tutorialCards.map((_, index) => (
             <div
               key={index}
@@ -203,23 +204,23 @@ export function TutorialScreen({
 
         <motion.div
           key={`header-${currentStep}`}
-          className="text-white text-center mb-1 md:mb-2"
+          className="text-white text-center mb-1"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <h2 className="text-xl md:text-2xl mb-1">
+          <h2 className="text-lg md:text-xl mb-0.5">
             {currentStep === 0 &&
               "Step 1: Understanding the mechanic"}
             {currentStep === 1 && "Step 2: Guided practice"}
             {currentStep === 2 && "Step 3: Full practice round"}
           </h2>
-          <p className="text-white/80 text-sm md:text-base">
+          <p className="text-white/80 text-xs md:text-sm">
             {getMicrocopy()}
           </p>
         </motion.div>
 
         {/* Card */}
-        <div className="flex-1 flex items-center justify-center mb-2 min-h-0">
+        <div className="flex-1 flex items-center justify-center mb-1 min-h-0">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentStep}
@@ -245,7 +246,7 @@ export function TutorialScreen({
         </div>
 
         {/* Action Buttons */}
-        <div className="pb-1">
+        <div className="px-3 md:px-6">
           {/* Step 1: Next button after flip only */}
           {currentStep === 0 && !hasFlipped && (
             <motion.div
@@ -256,7 +257,7 @@ export function TutorialScreen({
             >
               <button
                 onClick={onSkip}
-                className="text-white/70 hover:text-white text-sm underline transition-colors w-full py-2"
+                className="text-white/70 hover:text-white text-sm underline transition-colors w-full py-1"
               >
                 Skip Tutorial
               </button>
@@ -265,12 +266,12 @@ export function TutorialScreen({
 
           {currentStep === 0 && hasFlipped && (
             <motion.div
-              className="text-center space-y-3"
+              className="text-center space-y-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <p className="text-white/80 mb-2 text-xs md:text-base">
-                Got it? Let's practice again!
+              <p className="text-white/80 text-xs">
+                Got it? Let&apos;s practice again!
               </p>
               <Button
                 onClick={handleStep1Next}
@@ -288,14 +289,14 @@ export function TutorialScreen({
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-center space-y-2"
+              className="text-center space-y-1"
             >
-              <p className="text-white/70 text-xs mb-2">
+              <p className="text-white/70 text-xs">
                 Tap the card to see the answer.
               </p>
               <button
                 onClick={onSkip}
-                className="text-white/70 hover:text-white text-sm underline transition-colors w-full py-2"
+                className="text-white/70 hover:text-white text-sm underline transition-colors w-full py-1"
               >
                 Skip Tutorial
               </button>
@@ -304,11 +305,11 @@ export function TutorialScreen({
 
           {currentStep === 1 && hasFlipped && (
             <motion.div
-              className="space-y-3"
+              className="space-y-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <p className="text-white/70 text-center text-xs mb-2">
+              <p className="text-white/70 text-center text-xs">
                 Compare with your guess. How did you do?
               </p>
               <div className="flex gap-2 md:gap-3">
@@ -323,7 +324,7 @@ export function TutorialScreen({
               </div>
               <button
                 onClick={onSkip}
-                className="text-white/70 hover:text-white text-sm underline transition-colors w-full py-2"
+                className="text-white/70 hover:text-white text-sm underline transition-colors w-full py-1"
               >
                 Skip Tutorial
               </button>
@@ -335,9 +336,9 @@ export function TutorialScreen({
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="space-y-2"
+              className="space-y-1"
             >
-              <p className="text-white/70 text-center text-xs mb-2">
+              <p className="text-white/70 text-center text-xs">
                 In the real game, you can skip here. (Disabled
                 for tutorial practice.)
               </p>
@@ -350,7 +351,7 @@ export function TutorialScreen({
               </div>
               <button
                 onClick={onSkip}
-                className="text-white/70 hover:text-white text-sm underline transition-colors w-full py-2"
+                className="text-white/70 hover:text-white text-sm underline transition-colors w-full py-1"
               >
                 Skip Tutorial
               </button>
@@ -361,9 +362,9 @@ export function TutorialScreen({
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="space-y-2"
+              className="space-y-1"
             >
-              <p className="text-white/70 text-center text-xs mb-2">
+              <p className="text-white/70 text-center text-xs">
                 Compare with your guess. How did you do?
               </p>
               <div className="flex gap-2 md:gap-3">
@@ -378,7 +379,7 @@ export function TutorialScreen({
               </div>
               <button
                 onClick={onSkip}
-                className="text-white/70 hover:text-white text-sm underline transition-colors w-full py-2"
+                className="text-white/70 hover:text-white text-sm underline transition-colors w-full py-1"
               >
                 Skip Tutorial
               </button>
@@ -426,6 +427,7 @@ export function TutorialScreen({
                     onClick={handleGoBackToGuess}
                     variant="secondary"
                     fullWidth
+                    borderColor="#8B5CF6"
                   >
                     No, let me guess first
                   </Button>

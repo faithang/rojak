@@ -161,7 +161,7 @@ export function GameScreen({
   const handleShare = () => {
     const accuracy = getAccuracy(gameState);
     const pattern = getPatternString(gameState);
-    const shareText = `Rojak Results 🥗✨\n${gameState.correctCards.size}/${gameState.correctCards.size + gameState.incorrectCards.size} correct • ${accuracy}% accuracy\n🔥 Longest streak: ${gameState.longestStreak}\n\nMy mix today:\n${pattern}\n\nTry beating my Rojak 😤\ntinyurl.com/rojak-sg`;
+    const shareText = `Rojak Results 🥗✨\n${gameState.correctCards.size}/${gameState.correctCards.size + gameState.incorrectCards.size} correct • ${accuracy}% accuracy\n🔥 Longest streak: ${gameState.longestStreak}\n\nMy mix today:\n${pattern}\n\nTry beating my Rojak 😤\nrojak.app.tc1.airbase.sg`;
 
     // Create a temporary textarea for better clipboard support
     const textarea = document.createElement("textarea");
@@ -234,7 +234,7 @@ export function GameScreen({
   }
 
   return (
-    <div className="min-h-screen flex flex-col p-3 md:p-6 relative overflow-hidden">
+    <div className="min-h-[100dvh] flex flex-col p-3 md:p-6 relative overflow-hidden">
       {/* Gradient background */}
       <div
         className="absolute inset-0 -z-10"
@@ -278,13 +278,13 @@ export function GameScreen({
 
       <div className="max-w-md mx-auto w-full flex-1 flex flex-col">
         {/* Header */}
-        <div className="flex justify-between items-center mb-1 md:mb-2">
+        <div className="flex justify-between items-start mb-1 md:mb-2">
           <button
             onClick={() => setShowExitModal(true)}
-            className="text-white/90 hover:text-white flex items-center gap-1 transition-colors"
+            className="text-white bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full px-3 py-1.5 flex items-center gap-1.5 transition-all shadow-lg text-sm"
           >
-            <X size={18} />
-            <span className="text-xs">End</span>
+            <X size={16} />
+            <span>End</span>
           </button>
 
           <motion.div
@@ -300,7 +300,7 @@ export function GameScreen({
             transition={{ duration: 0.6 }}
           >
             <motion.div
-              className="px-4 py-2 rounded-full flex items-center gap-2"
+              className="px-3 py-1.5 rounded-full flex items-center gap-1.5"
               style={{
                 background:
                   skipsRemaining === 0
@@ -320,8 +320,8 @@ export function GameScreen({
                   : {}
               }
             >
-              <span className="text-xl">⏭️</span>
-              <span className="text-white text-lg">
+              <span className="text-base">⏭️</span>
+              <span className="text-white text-sm">
                 {skipsRemaining}/3
               </span>
             </motion.div>
@@ -332,18 +332,18 @@ export function GameScreen({
         </div>
 
         {/* Remaining cards count */}
-        <div className="text-center text-white/70 text-xs mb-1">
+        <div className="text-center text-white/70 text-xs mb-0.5">
           Round {gameState.currentRound} — {cardsLeftInRound}{" "}
           left
         </div>
 
         {/* Streak Indicator */}
-        <div className="flex justify-center mb-1 md:mb-2">
+        <div className="flex justify-center mb-1">
           <StreakIndicator streak={gameState.streak} />
         </div>
 
         {/* Card */}
-        <div className="flex-1 flex items-center justify-center mb-2 min-h-0">
+        <div className="flex-1 flex items-center justify-center mb-1 min-h-0">
           <AnimatePresence mode="wait">
             {currentCard && !cardExitDirection && (
               <motion.div
@@ -381,39 +381,53 @@ export function GameScreen({
         </div>
 
         {/* Action Buttons */}
-        <div className="pb-1">
-          {!hasCurrentCardBeenRevealed ? (
-            // Pre-reveal state: Only Skip button (card hasn't been revealed yet)
-            <>
-              <p className="text-white/70 text-center text-xs mb-2">
-                Make a guess in your head, or skip if you're
-                totally stuck.
-              </p>
-              <div className="flex gap-2 md:gap-3">
-                <GameButton
-                  type="skip"
-                  onClick={() => handleCardAction("skip")}
-                />
-              </div>
-            </>
-          ) : (
-            // Post-reveal state: Only grading buttons (card has been revealed)
-            <>
-              <p className="text-white/70 text-center text-xs mb-2">
-                Compare with your guess. How did you do?
-              </p>
-              <div className="flex gap-2 md:gap-3">
-                <GameButton
-                  type="incorrect"
-                  onClick={() => handleCardAction("incorrect")}
-                />
-                <GameButton
-                  type="correct"
-                  onClick={() => handleCardAction("correct")}
-                />
-              </div>
-            </>
-          )}
+        <div className="px-3 md:px-6">
+          <AnimatePresence mode="wait">
+            {!hasCurrentCardBeenRevealed ? (
+              // Pre-reveal state: Only Skip button (card hasn't been revealed yet)
+              <motion.div
+                key="skip-button"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
+              >
+                <p className="text-white/70 text-center text-xs mb-1">
+                  Make a guess in your head, or skip if you're
+                  totally stuck.
+                </p>
+                <div className="flex gap-2 md:gap-3">
+                  <GameButton
+                    type="skip"
+                    onClick={() => handleCardAction("skip")}
+                  />
+                </div>
+              </motion.div>
+            ) : (
+              // Post-reveal state: Only grading buttons (card has been revealed)
+              <motion.div
+                key="grading-buttons"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
+              >
+                <p className="text-white/70 text-center text-xs mb-1">
+                  Compare with your guess. How did you do?
+                </p>
+                <div className="flex gap-2 md:gap-3">
+                  <GameButton
+                    type="incorrect"
+                    onClick={() => handleCardAction("incorrect")}
+                  />
+                  <GameButton
+                    type="correct"
+                    onClick={() => handleCardAction("correct")}
+                  />
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
 
@@ -524,6 +538,7 @@ export function GameScreen({
               onClick={handlePlayAgain}
               variant="secondary"
               fullWidth
+              borderColor="#8B5CF6"
             >
               Play Again
             </Button>

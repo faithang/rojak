@@ -8,6 +8,7 @@ interface ButtonProps {
   icon?: ReactNode;
   disabled?: boolean;
   fullWidth?: boolean;
+  borderColor?: string;
 }
 
 export function Button({ 
@@ -16,7 +17,8 @@ export function Button({
   variant = 'primary', 
   icon,
   disabled = false,
-  fullWidth = false 
+  fullWidth = false,
+  borderColor
 }: ButtonProps) {
   const variants = {
     primary: 'linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)',
@@ -39,6 +41,7 @@ export function Button({
   };
 
   const getBorderStyle = () => {
+    if (borderColor) return `2px solid ${borderColor}`;
     if (variant === 'secondary' || variant === 'secondary-light') return '2px solid rgba(255, 255, 255, 0.4)';
     if (variant === 'outline') return '2px solid rgba(0,0,0,0.2)';
     return 'none';

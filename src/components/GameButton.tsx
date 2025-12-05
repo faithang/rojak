@@ -28,8 +28,8 @@ export function GameButton({ type, onClick, disabled = false }: GameButtonProps)
     skip: {
       icon: <SkipForward size={24} />,
       label: 'Skip',
-      gradient: 'linear-gradient(135deg, #6B7280 0%, #4B5563 100%)',
-      shadow: 'rgba(107, 114, 128, 0.4)',
+      gradient: 'linear-gradient(135deg, #4B5563 0%, #374151 100%)',
+      shadow: 'rgba(75, 85, 99, 0.4)',
       disabledGradient: 'linear-gradient(135deg, #9CA3AF 0%, #6B7280 100%)',
       disabledShadow: 'rgba(156, 163, 175, 0.2)'
     }

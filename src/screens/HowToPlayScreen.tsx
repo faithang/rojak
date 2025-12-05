@@ -15,13 +15,14 @@ export function HowToPlayScreen({
   onTryTutorial,
 }: HowToPlayScreenProps) {
   return (
-    <div className="min-h-screen p-6 relative overflow-hidden">
+    <div className="min-h-[100dvh] p-6 relative overflow-auto">
       {/* Gradient background */}
       <div
         className="absolute inset-0 -z-10"
         style={{
           background:
             "linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)",
+          minHeight: '100dvh'
         }}
       />
 
