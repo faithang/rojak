@@ -49,9 +49,9 @@ export function HowToPlayScreen({
               What's Rojak?
             </h2>
             <p className="text-white/90 mb-4">
-              Rojak is a word fusion game. Each clue hides two
-              answers that share a word or syllable. You mix
-              them together into one combined phrase.
+              Rojak is a word fusion game. 
+              Every puzzle consists of two clues separated by a (+) sign. Each clue has its own answer, and the two answers share at least one syllable.  
+              Crack both answers, then smash them together into one final combined answer.
             </p>
           </div>
 
