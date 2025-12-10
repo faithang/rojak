@@ -1,7 +1,6 @@
 export const cardsData = `Front,Back
 SG founding father + first line of a Backstreet Boys' song,Lee Kuan Yew are my fire
 Iconic drink-dispensing vehicle + Famous painter who cut his ear off, Milo Van Gogh
-Leader of the Opposition + Country that Americans think is in China,Pritam Singhapore
 Event that occurs in August each year + X-ray doctor,National Day Paradiologist
 "Senator I'm Singaporean!" + What a mum tells a toddler at mealtimes,Shou Zi Chew your food!
 Jamus' catchphrase in GE2020 + No. 1 cause of death in SG,Warms the cockles of my heart disease

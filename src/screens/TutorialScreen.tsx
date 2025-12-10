@@ -13,19 +13,19 @@ interface TutorialScreenProps {
 const tutorialCards = [
   {
     front:
-      "Halloween greeting + Agreement that ended World War II",
-    back: "Trick or Treaty of Versailles",
-  },
-  {
-    front:
       "Every kid's favourite fast-food chain + US president",
     back: "McDonald Trump",
   },
   {
     front:
-      "What PAP is accused of every election + A fungal infection,",
-    back: "Gerrymande-ringworm",
+      "Leader of the Opposition + Country that Americans think is in China",
+    back: "Pritam Singhapore",
   },
+  {
+    front:
+    "What PAP is accused of every election to disadvantage the opposition + A fungal infection",
+    back: "Gerrymande-ringworm",
+  }
 ];
 
 export function TutorialScreen({
